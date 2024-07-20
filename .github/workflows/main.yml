@@ -20,9 +20,19 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        continue-on-error: true
 
       - name: Run Cypress tests
         run: npm run cypress:run
+
+      - name: Cypress artifacts - Evidence videos
+        if: always()  # Asegura que los artefactos se suban incluso si el paso anterior falla
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-artifacts-evidenceVideos
+          path: |            
+            cypress/screenshots
+            cypress/videos
 
       - name: Generate HTML report
         run: |
