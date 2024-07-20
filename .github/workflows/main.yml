@@ -16,13 +16,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 21.7.2
 
       - name: Install dependencies
         run: npm install
 
       - name: Run Cypress tests
-        run: npm run report
+        run: npm run cypress:run
 
       - name: Generate HTML report
         run: |
