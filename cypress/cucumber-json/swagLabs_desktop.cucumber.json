@@ -1,0 +1,515 @@
+[
+  {
+    "description": "    As a user of saucedemo.com\n    I enter saucedemo.com\n    To buy a product",
+    "keyword": "Feature",
+    "name": "Buy product at saucedemo.com on desktop",
+    "line": 1,
+    "id": "buy-product-at-saucedemo.com-on-desktop",
+    "tags": [],
+    "uri": "swagLabs_desktop.feature",
+    "elements": [
+      {
+        "id": "buy-product-at-saucedemo.com-on-desktop;validate-successful-purchase-of-a-product",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Validate successful purchase of a product",
+        "tags": [
+          {
+            "name": "@Successful_Purchase",
+            "line": 9
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "That the user enters the the saucelabs login page site on desktop",
+            "result": {
+              "status": "passed",
+              "duration": 3612000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "A user enters the username \"standard_user\", the password \"secret_sauce\", and clicks on the login button",
+            "result": {
+              "status": "passed",
+              "duration": 1938000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "product",
+                      "firstname",
+                      "lastname",
+                      "postalCode"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "sauce-labs-backpack,sauce-labs-bike-light",
+                      "Cristian",
+                      "Hernandez",
+                      "55450"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Buy a product",
+            "result": {
+              "status": "passed",
+              "duration": 3079000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "Verify that the purchase successful \"Thank you for your order!\"",
+            "result": {
+              "status": "passed",
+              "duration": 77000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "buy-product-at-saucedemo.com-on-desktop;validate-missing-mandatory-fields",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Validate missing mandatory fields",
+        "tags": [
+          {
+            "name": "@YourInformationFormMandatoryFields",
+            "line": 21
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "That the user enters the the saucelabs login page site on desktop",
+            "result": {
+              "status": "passed",
+              "duration": 1498000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "A user enters the username \"standard_user\", the password \"secret_sauce\", and clicks on the login button",
+            "result": {
+              "status": "passed",
+              "duration": 1081000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "product"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "sauce-labs-backpack,sauce-labs-bike-light"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I enter checkout product",
+            "result": {
+              "status": "passed",
+              "duration": 883000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I enter the firstName, lastName and postalCode \"\" , \"Doe\", \"12345\" and to continue",
+            "result": {
+              "status": "passed",
+              "duration": 1240000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see the error message \"Error: First Name is required\"",
+            "result": {
+              "status": "passed",
+              "duration": 51000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "buy-product-at-saucedemo.com-on-desktop;validate-missing-mandatory-fields",
+        "keyword": "Scenario",
+        "line": 32,
+        "name": "Validate missing mandatory fields",
+        "tags": [
+          {
+            "name": "@YourInformationFormMandatoryFields",
+            "line": 21
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "That the user enters the the saucelabs login page site on desktop",
+            "result": {
+              "status": "passed",
+              "duration": 431000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "A user enters the username \"standard_user\", the password \"secret_sauce\", and clicks on the login button",
+            "result": {
+              "status": "passed",
+              "duration": 1003000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "product"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "sauce-labs-backpack,sauce-labs-bike-light"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I enter checkout product",
+            "result": {
+              "status": "passed",
+              "duration": 655000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I enter the firstName, lastName and postalCode \"John\" , \"\", \"12345\" and to continue",
+            "result": {
+              "status": "passed",
+              "duration": 1074000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see the error message \"Error: Last Name is required\"",
+            "result": {
+              "status": "passed",
+              "duration": 36000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "buy-product-at-saucedemo.com-on-desktop;validate-missing-mandatory-fields",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "Validate missing mandatory fields",
+        "tags": [
+          {
+            "name": "@YourInformationFormMandatoryFields",
+            "line": 21
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "That the user enters the the saucelabs login page site on desktop",
+            "result": {
+              "status": "passed",
+              "duration": 1027000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "A user enters the username \"standard_user\", the password \"secret_sauce\", and clicks on the login button",
+            "result": {
+              "status": "passed",
+              "duration": 945000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "product"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "sauce-labs-backpack,sauce-labs-bike-light"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I enter checkout product",
+            "result": {
+              "status": "passed",
+              "duration": 632000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I enter the firstName, lastName and postalCode \"John\" , \"Doe\", \"\" and to continue",
+            "result": {
+              "status": "passed",
+              "duration": 1014000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see the error message \"Error: Postal Code is required\"",
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "buy-product-at-saucedemo.com-on-desktop;validate-incorrect-login",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "Validate Incorrect Login",
+        "tags": [
+          {
+            "name": "@LoginWithIncorrectCredentials",
+            "line": 36
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "That the user enters the the saucelabs login page site on desktop",
+            "result": {
+              "status": "passed",
+              "duration": 1033000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "username",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "testName",
+                      "secret_sauce"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 38,
+            "name": "A user provides incorrect credentials, and clicks on the login button",
+            "result": {
+              "status": "passed",
+              "duration": 843000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "The error message \"Epic sadface: Username and password do not match any user in this service\" is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "buy-product-at-saucedemo.com-on-desktop;validate-incorrect-login",
+        "keyword": "Scenario",
+        "line": 45,
+        "name": "Validate Incorrect Login",
+        "tags": [
+          {
+            "name": "@LoginWithIncorrectCredentials",
+            "line": 36
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "That the user enters the the saucelabs login page site on desktop",
+            "result": {
+              "status": "passed",
+              "duration": 341000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "username",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "standard_user",
+                      "testPassword"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 38,
+            "name": "A user provides incorrect credentials, and clicks on the login button",
+            "result": {
+              "status": "passed",
+              "duration": 1098000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "The error message \"Epic sadface: Username and password do not match any user in this service\" is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "buy-product-at-saucedemo.com-on-desktop;validate-incorrect-login",
+        "keyword": "Scenario",
+        "line": 46,
+        "name": "Validate Incorrect Login",
+        "tags": [
+          {
+            "name": "@LoginWithIncorrectCredentials",
+            "line": 36
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "That the user enters the the saucelabs login page site on desktop",
+            "result": {
+              "status": "passed",
+              "duration": 424000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "username",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "locked_out_user",
+                      "secret_sauce"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 38,
+            "name": "A user provides incorrect credentials, and clicks on the login button",
+            "result": {
+              "status": "passed",
+              "duration": 986000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "The error message \"Epic sadface: Sorry, this user has been locked out.\" is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 22000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
